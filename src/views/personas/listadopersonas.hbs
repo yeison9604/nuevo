@@ -1,0 +1,32 @@
+<div class="container">
+
+    <h1>Listado De Personas</h1>
+
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Nombre</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{cedula}}</td>
+      <td>{{apellido}}</td>
+      <td>{{telefono}}</td>
+      <td>
+        <a href="editar/{{cedula}}" class="btn btn-primary">Editar</a>
+        <a href="eliminar/{{cedula}}" class="btn btn-primary">Eliminar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+

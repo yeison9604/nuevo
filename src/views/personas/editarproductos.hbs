@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Registro de productos</h1>
+    <div class="card">
+        <div class="card-header">
+            Formulario de Registro
+        </div>
+        <div class="card-body">
+            <form action="/editarproductos/{{data.id_producto}}" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="id_producto" value="{{data.id_producto}}" readonly  placeholder="Codigo">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="nombre_producto" value="{{data.nombre_producto}}" placeholder="Nombre del producto">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="tipo_producto" value="{{data.tipo_producto}}"  placeholder="Tipo del producto">
+                </div>
+                
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn btn-primary" value="Registrar">
+                    <button class="form-control btn btn-primary">Regresar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

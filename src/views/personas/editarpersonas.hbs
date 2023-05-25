@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Registro de personas</h1>
+    <div class="card">
+        <div class="card-header">
+            Formulario de Registro
+        </div>
+        <div class="card-body">
+            <form action="/editarpersonas/{{data.cedula}}" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="nombre" value="{{data.nombre}}"  placeholder="nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="cedula" value="{{data.cedula}}" readonly placeholder="cedula">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="apellido" value="{{data.apellido}}"  placeholder="apellido">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" name="telefono" value="{{data.telefono}}"  placeholder="telefono">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn btn-primary" value="Registrar">
+                    <button class="form-control btn btn-primary">Regresar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

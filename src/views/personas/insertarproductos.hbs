@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 style="background: black;">Registro de productos</h1>
+    <div class="card">
+        <div class="card-header">
+            Formulario de Registro
+        </div>
+        <div class="card-body">
+            <form action="insertarproductos" method="POST">
+                <div class="mb-3">
+                    <input type="number" style="border-color: green;" class="form-control" name="id_producto" placeholder="id_producto">
+                </div>
+                <div class="mb-3">
+                    <input type="text" style="border-color: yellow;" class="form-control" name="nombre_producto" placeholder="nombre_producto">
+                </div>
+                <div class="mb-3">
+                    <input type="text" style="border-color: red;" class="form-control" name="tipo_producto" placeholder="tipo_producto">
+                </div>
+                
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn btn-primary" style="border: solid black 10px; " value="Registrarlo">
+                    <button class="form-control btn btn-primary" style="border: solid black 10px; ">Regresar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

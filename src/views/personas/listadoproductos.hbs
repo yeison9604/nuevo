@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h1>Listado De Productos</h1>
+
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre del producto</th>
+      <th scope="col">Tipo del producto</th>
+      
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{id_producto}}</td>
+      <td>{{nombre_producto}}</td>
+      <td>{{tipo_producto}}</td>
+      
+      <td>
+        <a href="editarlo/{{id_producto}}" class="btn btn-primary">Editarlo</a>
+        <a href="eliminarlo/{{id_producto}}" class="btn btn-primary">Eliminarlo</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
