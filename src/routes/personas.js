@@ -23,6 +23,24 @@ router.get("/listadopersonas", async (req, res) =>{
     
 });
 
+router.get("/index2.hbs", async (req, res) =>{
+    
+    let pool = await sql.connect(config);
+    pool.query("SELECT id, usuario, pass FROM logiin", (error, results, fields) =>{
+        if(error){
+            console.log("Error: ", error);
+            res.send({
+                "code" : 400,
+                "failed" : "Error ocurrido"
+            });
+        }else{
+            res.render("personas/listadopersonas", {data: results.recordset});
+        }
+    });
+    
+    
+});
+
 router.get("/insertarpersonas", (req, res)=>{
     res.render("personas/insertarpersonas");
 })
