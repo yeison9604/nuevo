@@ -23,7 +23,7 @@ router.get("/listadopersonas", async (req, res) =>{
     
 });
 
-router.get("/index2.hbs", async (req, res) =>{
+router.get("/index2", async (req, res) =>{
     
     let pool = await sql.connect(config);
     pool.query("SELECT id, usuario, pass FROM logiin", (error, results, fields) =>{
