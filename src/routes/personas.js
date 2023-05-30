@@ -23,7 +23,7 @@ router.get("/listadopersonas", async (req, res) =>{
     
 });
 
-router.get("/index2", async (req, res) =>{
+/*router.get("/index2", async (req, res) =>{
     
     let pool = await sql.connect(config);
     pool.query("SELECT id, usuario, pass FROM logiin", (error, results, fields) =>{
@@ -34,12 +34,13 @@ router.get("/index2", async (req, res) =>{
                 "failed" : "Error ocurrido"
             });
         }else{
-            res.render("personas/listadopersonas", {data: results.recordset});
+            res.render("index2", {data: results.recordset});
         }
     });
     
     
 });
+*/
 
 router.get("/insertarpersonas", (req, res)=>{
     res.render("personas/insertarpersonas");

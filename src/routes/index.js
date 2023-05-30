@@ -5,9 +5,9 @@ router.get("/", (req, res) =>{
     res.render("index");
 });
 
-router.get("/index2", (req, res) =>{
-    res.render("login/index2");
+/*router.get("/i", (req, res) =>{
+    res.render("");
 });
-
+*/
 
 module.exports = router;
