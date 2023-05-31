@@ -3,6 +3,8 @@ const {engine} = require("express-handlebars");
 const path = require("path");
 const morgan = require("morgan");
 const {extname} = require("path");
+const dotenv = require("dotenv")
+const cookieParser = require("cookie-parser")
 
 const app = express();
 
@@ -15,9 +17,9 @@ app.engine(".hbs", engine({
     extname : ".hbs",
 }));
 
-
+app.use("/", require("./routes/index"))
 app.set("view engine",".hbs");
-
+dotenv.config({path: './env/.env'})
 app.use(morgan("start"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -25,6 +27,7 @@ app.use(express.json());
 app.use(require("./routes/index"));
 app.use(require("./routes/personas"));
 
+app.use(cookieParser)
 
 app.use(express.static(path.join(__dirname, "public")));
 
