@@ -23,7 +23,7 @@ router.get("/listadopersonas", async (req, res) =>{
     
 });
 
-router.get("/index2", async (req, res) =>{
+/*router.get("/index2", async (req, res) =>{
     
     let pool = await sql.connect(config);
     pool.query("SELECT id, username FROM logiin", (error, results, fields) =>{
@@ -40,7 +40,7 @@ router.get("/index2", async (req, res) =>{
     
     
 });
-
+*/
 
 router.get("/insertarpersonas", (req, res)=>{
     res.render("personas/insertarpersonas");
