@@ -55,6 +55,15 @@ router.post("/insertarpersonas", async(req, res)=>{
     res.redirect("listadopersonas");
 });
 
+router.post("/perfiles", async(req, res)=>{
+
+    let pool = await sql.connect(config);
+    const {id, username, password} = req.body;
+    var query = "SELECT login(id, username, password) VALUES('" + id + "', '" + username + "','" + password + "')"
+    pool.request().query(query);
+    res.redirect("perfiles");
+});
+
 router.get("/eliminar/:cedula", async(req, res)=>{
 
     const {cedula} = req.params;

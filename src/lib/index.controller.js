@@ -14,4 +14,8 @@ indexController.index2 = (req, res) =>{
     res.render('index2')
 }
 
+indexController.perfiles = (req, res) =>{
+    res.render('perfiles')
+}
+
 export default indexController

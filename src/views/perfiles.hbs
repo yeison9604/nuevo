@@ -1,0 +1,30 @@
+<div class="container">
+
+    <h1>Perfiles</h1>
+
+    <a href="http://localhost:8080/" class="btn btn-primary">Atras</a>
+
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">id</th>
+      <th scope="col">username</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{username}}</td>
+      
+      <td>
+        <a href="editar/{{id}}" class="btn btn-primary">Editar</a>
+        <a href="eliminar/{{id}}" class="btn btn-primary">Eliminar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
