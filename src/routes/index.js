@@ -1,4 +1,5 @@
-
+import { Express } from "express";
+import indexController from "../lib/index.controller";
 
 const express = require("express");
 const router = express.Router();
@@ -6,6 +7,8 @@ const router = express.Router();
 router.get("/", (req, res) =>{
     res.render("index");
 });
+
+router.get('/index2/', indexController.index2)
 
 /*router.get("/index2", (req, res) =>{
     res.render("index2");
