@@ -38,28 +38,27 @@
   </head>
   <body class="text-center">
     
-<main class="form-sign-in">
-  <form action="index2" method="post">
+<main class="form-sign-in text-center shadow-lg p-3 mb-5">
+  <form action="/login" method="post">
     <img class="mb-4" src="image/logo.jpg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Ingresar</h1>
+    <h1 class="h3 mb-3 fw-normal">Iniciar Sesion</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Usuario</label>
+      <input type="text" class="form-control" id="user" name="user" placeholder="User">
+      <label for="user" style="text-align: center;">User</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Contraseña</label>
+      <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+      <label for="floatingPassword" style="text-align: center;">Password</label>
     </div>
 
     <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    <button class="w-100 btn btn-lg btn-outline-primary" type="submit">Inicias Sesion</button>
+    
   </form>
+  <br>
+  <a type="button" class="w-100 btn btn-lg btn-outline-danger">Registrarse</a>
 </main>
 
 

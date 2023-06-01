@@ -11,12 +11,12 @@ indexController.personas = (req, res) =>{
     res.render('personas')
 }
 
-indexController.index2 = (req, res) =>{
-    res.render('index2')
+indexController.login = (req, res) =>{
+    res.render('login')
 }
 
-indexController.perfiles = (req, res) =>{
-    res.render('perfiles')
+indexController.registro = (req, res) =>{
+    res.render('registro')
 }
 
 export default indexController

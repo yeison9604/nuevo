@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(require("./routes/index"));
 app.use(require("./routes/personas"));
 
-app.use(cookieParser)
+
 
 app.use(express.static(path.join(__dirname, "public")));
 

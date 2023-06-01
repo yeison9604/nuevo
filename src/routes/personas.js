@@ -23,24 +23,7 @@ router.get("/listadopersonas", async (req, res) =>{
     
 });
 
-/*router.get("/index2", async (req, res) =>{
-    
-    let pool = await sql.connect(config);
-    pool.query("SELECT id, username FROM logiin", (error, results, fields) =>{
-        if(error){
-            console.log("Error: ", error);
-            res.send({
-                "code" : 400,
-                "failed" : "Error ocurrido"
-            });
-        }else{
-            res.render("index2", {data: results.recordset});
-        }
-    });
-    
-    
-});
-*/
+
 
 router.get("/insertarpersonas", (req, res)=>{
     res.render("personas/insertarpersonas");
@@ -55,13 +38,13 @@ router.post("/insertarpersonas", async(req, res)=>{
     res.redirect("listadopersonas");
 });
 
-router.post("/perfiles", async(req, res)=>{
+router.post("/registro", async(req, res)=>{
 
     let pool = await sql.connect(config);
     const {id, username, password} = req.body;
     var query = "SELECT login(id, username, password) VALUES('" + id + "', '" + username + "','" + password + "')"
     pool.request().query(query);
-    res.redirect("perfiles");
+    res.redirect("registro");
 });
 
 router.get("/eliminar/:cedula", async(req, res)=>{
